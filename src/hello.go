@@ -11,8 +11,11 @@ func main() {
 	
 	j := 1
 	
+	fmt.Println("while")
+	
 	for j < 5 {
 		j += j
+		fmt.Println(j)
 	}
 	
 	fmt.Println(j)

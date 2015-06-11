@@ -56,6 +56,12 @@ func listEx() {
 	}
 }
 
+func randInt(max int) (int) {
+	rand.Seed(time.Now().UTC().UnixNano())
+	
+	return rand.Intn(max)
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	loops()
@@ -68,8 +74,7 @@ func main() {
 	fmt.Println("Random numbers: ")
 	
 	for i := 0; i < 5; i++ {
-		rand.Seed(time.Now().UTC().UnixNano())
-		fmt.Println(rand.Intn(100))
+		fmt.Println(randInt(100))
 	}
 	
 	fmt.Println(add(3, 4))

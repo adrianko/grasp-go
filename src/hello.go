@@ -38,6 +38,13 @@ func loops() {
 	fmt.Println(j)
 }
 
+func arrayEx() {
+	arr := []string{"abc", "def"}
+	fmt.Println(arr)
+	arr = append(arr, "ghi", "abc")
+	fmt.Println(arr)
+}
+
 func listEx() {
 	list := list.New()
 	list.PushBack(4)
@@ -55,10 +62,7 @@ func main() {
 	
 	fmt.Println(time.Now())
 	
-	arr := []string{"abc", "def"}
-	fmt.Println(arr)
-	arr = append(arr, "ghi", "abc")
-	fmt.Println(arr)
+	arrayEx()
 	listEx()
 	
 	fmt.Println("Random numbers: ")

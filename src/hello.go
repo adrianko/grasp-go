@@ -78,6 +78,7 @@ func main() {
 	i := 3 //implicit type
 	var m int = 2 //declared type
 	var n int = int(4.0)
+	const Hello = "World"
 	loops()
 	
 	fmt.Println(time.Now())

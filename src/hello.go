@@ -24,8 +24,8 @@ func main() {
 	fmt.Println(j)
 	fmt.Println(time.Now())
 	
-	list := []string{"abc", "def"}
-	fmt.Println(list)
-	list = append(list, "ghi", "abc")
-	fmt.Println(list)
+	arr := []string{"abc", "def"}
+	fmt.Println(arr)
+	arr = append(arr, "ghi", "abc")
+	fmt.Println(arr)
 }

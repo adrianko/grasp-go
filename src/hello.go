@@ -21,9 +21,7 @@ func split(sum int) (x, y int) {
 	return
 }
 
-func main() {
-	fmt.Println("Hello, world")
-	
+func loops() {
 	for i := 0; i < 5; i++ {
 		fmt.Println(i)
 	}
@@ -38,6 +36,12 @@ func main() {
 	}
 	
 	fmt.Println(j)
+}
+
+func main() {
+	fmt.Println("Hello, world")
+	loops()
+	
 	fmt.Println(time.Now())
 	
 	arr := []string{"abc", "def"}

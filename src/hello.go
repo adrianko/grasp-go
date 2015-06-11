@@ -22,5 +22,5 @@ func main() {
 	}
 	
 	fmt.Println(j)
-	fmt.Prinln(time.Now())
+	fmt.Println(time.Now())
 }

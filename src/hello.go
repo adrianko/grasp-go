@@ -64,7 +64,18 @@ func randInt(max int) (int) {
 
 func main() {
 	fmt.Println("Hello, world")
-	k := 3 //implicit type
+	/*
+	Go basic types
+	bool
+	string
+	int int8 int16 int32 int64
+	uint uint8 uint16 uint32 uint64 uintpr
+	byte (alias for uint8)
+	rune (alias for int32)
+	float32 float64
+	complex64 complex128
+	*/
+	i := 3 //implicit type
 	var m int = 2 //declared type
 	loops()
 	
@@ -79,7 +90,7 @@ func main() {
 		fmt.Println(randInt(100))
 	}
 	
-	fmt.Println(add(3, 4))
+	fmt.Println(add(i, m))
 	hello := "hello"
 	world := "world"
 	hello, world = swap(hello, world)

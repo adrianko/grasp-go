@@ -77,6 +77,7 @@ func main() {
 	*/
 	i := 3 //implicit type
 	var m int = 2 //declared type
+	var n int = int(4.5)
 	loops()
 	
 	fmt.Println(time.Now())
@@ -97,5 +98,5 @@ func main() {
 	fmt.Println("hello: " + hello)
 	fmt.Println("world: " + world)
 	
-	fmt.Println(split(17))
+	fmt.Println(split(n))
 }

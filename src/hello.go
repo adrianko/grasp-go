@@ -64,6 +64,8 @@ func randInt(max int) (int) {
 
 func main() {
 	fmt.Println("Hello, world")
+	k := 3 //implicit type
+	var m int = 2 //declared type
 	loops()
 	
 	fmt.Println(time.Now())

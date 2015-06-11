@@ -26,6 +26,6 @@ func main() {
 	
 	list := []string{"abc", "def"}
 	fmt.Println(list)
-	list = append(list, "ghi")
+	list = append(list, "ghi", "abc")
 	fmt.Println(list)
 }

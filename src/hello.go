@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
+	"math"
 	"container/list"
 	"math/rand"
 )
@@ -62,6 +63,14 @@ func randInt(max int) (int) {
 	return rand.Intn(max)
 }
 
+func ifScopedVars() (float64) {
+	if v:= math.Pow(5, 2); v < 20 {
+		return v
+	}
+	
+	return 20
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -100,4 +109,5 @@ func main() {
 	fmt.Println("world: " + world)
 	
 	fmt.Println(split(n))
+	fmt.Println(ifScopedVars())
 }

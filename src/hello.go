@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"time"
 	"container/list"
+	"math/rand"
 )
 
 func main() {
@@ -37,5 +38,12 @@ func main() {
 	
 	for e := list.Front(); e != nil; e = e.Next() {
 		fmt.Println(e.Value)
+	}
+	
+	fmt.Println("Random numbers: ")
+	
+	for i := 0; i < 5; i++ {
+		rand.Seed(time.Now().UTC().UnixNano())
+		fmt.Println(rand.Intn(100))
 	}
 }

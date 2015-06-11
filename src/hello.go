@@ -11,6 +11,10 @@ func add(x int, y int) int {
 	return x + y
 }
 
+func swap(x, y string) (string, string) {
+	return y, x
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	
@@ -52,4 +56,9 @@ func main() {
 	}
 	
 	fmt.Println(add(3, 4))
+	hello := "hello"
+	world := "world"
+	hello, world = swap(hello, world)
+	fmt.Println("hello: " + hello)
+	fmt.Println("world: " + world)
 }

@@ -7,6 +7,10 @@ import (
 	"math/rand"
 )
 
+func add(x int, y int) int {
+	return x + y
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	
@@ -46,4 +50,6 @@ func main() {
 		rand.Seed(time.Now().UTC().UnixNano())
 		fmt.Println(rand.Intn(100))
 	}
+	
+	fmt.Println(add(3, 4))
 }

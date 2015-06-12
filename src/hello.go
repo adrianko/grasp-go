@@ -77,6 +77,17 @@ func deferred() {
 	fmt.Println("hello")
 }
 
+func deferredStack() {
+	fmt.Println("\n")
+	fmt.Println("counting")
+	
+	for i := 0; i < 5; i++ {
+		defer fmt.Println(i)
+	}
+	
+	fmt.Println("done")
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -117,4 +128,5 @@ func main() {
 	fmt.Println(split(n))
 	fmt.Println(ifScopedVars())
 	deferred()
+	deferredStack()
 }

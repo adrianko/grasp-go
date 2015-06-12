@@ -129,4 +129,11 @@ func main() {
 	fmt.Println(ifScopedVars())
 	deferred()
 	deferredStack()
+	
+	t := 2 //var
+	p := &t //pointer
+	*p = 21
+	
+	fmt.Println(p) //mem address
+	fmt.Println(*p) //mem address value
 }

@@ -71,6 +71,12 @@ func ifScopedVars() (float64) {
 	return 20
 }
 
+func deferred() {
+	defer fmt.Println("world")
+	
+	fmt.Println("hello")
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -110,4 +116,5 @@ func main() {
 	
 	fmt.Println(split(n))
 	fmt.Println(ifScopedVars())
+	deferred()
 }

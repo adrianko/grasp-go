@@ -88,6 +88,10 @@ func deferredStack() {
 	fmt.Println("done")
 }
 
+type Vertex struct {
+	X, Y int
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -136,4 +140,6 @@ func main() {
 	
 	fmt.Println(p) //mem address
 	fmt.Println(*p) //mem address value
+	v := Vertex{1, 2} //use Struct (collection of fields)
+	fmt.Println(v.X)
 }

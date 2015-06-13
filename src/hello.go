@@ -88,6 +88,15 @@ func deferredStack() {
 	fmt.Println("done")
 }
 
+func slices() {
+	s := []int{2, 3, 5, 7, 11,13}
+	fmt.Println("s ==", s)
+	
+	for i := 0; i < len(s); i++ {
+		fmt.Printf("s[%d] == %d\n", i, s[i])
+	}
+}
+
 type Vertex struct {
 	X, Y int
 }
@@ -142,4 +151,5 @@ func main() {
 	fmt.Println(*p) //mem address value
 	v := Vertex{1, 2} //use Struct (collection of fields)
 	fmt.Println(v.X)
+	slices()
 }

@@ -95,6 +95,13 @@ func slices() {
 	for i := 0; i < len(s); i++ {
 		fmt.Printf("s[%d] == %d\n", i, s[i])
 	}
+	
+	//create slice
+	fmt.Println(s[1:4])
+	
+	//make slice
+	a := make([]int, 0, 5)
+	fmt.Println(a)
 }
 
 type Vertex struct {

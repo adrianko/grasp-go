@@ -89,7 +89,7 @@ func deferredStack() {
 }
 
 func slices() {
-	s := []int{2, 3, 5, 7, 11,13}
+	s := []int{2, 3, 5, 7, 11, 13}
 	fmt.Println("s ==", s)
 	
 	for i := 0; i < len(s); i++ {
@@ -102,6 +102,11 @@ func slices() {
 	//make slice
 	a := make([]int, 0, 5)
 	fmt.Println(a)
+	
+	//range
+	for i, v := range s {
+		fmt.Printf("%d: %d\n", i, v)
+	}
 }
 
 type Vertex struct {

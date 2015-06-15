@@ -104,8 +104,8 @@ func slices() {
 	fmt.Println(a)
 	
 	//range
-	for i, v := range s {
-		fmt.Printf("%d: %d\n", i, v)
+	for _, v := range s {
+		fmt.Printf("%d\n", v)
 	}
 }
 

@@ -109,6 +109,15 @@ func slices() {
 	}
 }
 
+func maps() {
+	m := make(map[string]string)
+	m["hello"] = "world"
+
+	for k, v := range m {
+		fmt.Printf("%s -> %s\n", k, v)
+	}
+}
+
 type Vertex struct {
 	X, Y int
 }
@@ -164,4 +173,5 @@ func main() {
 	v := Vertex{1, 2} //use Struct (collection of fields)
 	fmt.Println(v.X)
 	slices()
+	maps()
 }

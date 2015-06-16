@@ -118,6 +118,17 @@ func maps() {
 	}
 }
 
+func mapLiteral() {
+	m := map[string]string{
+		"hello": "world",
+		"abc":   "def",
+	}
+
+	for k, v := range m {
+		fmt.Printf("%s -> %s\n", k, v)
+	}
+}
+
 type Vertex struct {
 	X, Y int
 }
@@ -174,4 +185,5 @@ func main() {
 	fmt.Println(v.X)
 	slices()
 	maps()
+	mapLiteral()
 }

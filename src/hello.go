@@ -122,11 +122,16 @@ func mapLiteral() {
 	m := map[string]string{
 		"hello": "world",
 		"abc":   "def",
+		"ghi":   "jkl",
 	}
 
 	for k, v := range m {
 		fmt.Printf("%s -> %s\n", k, v)
 	}
+
+	delete(m, "abc")
+	v, ok := m["hello"]
+	fmt.Println("Value:", v, "Present:", ok)
 }
 
 type Vertex struct {

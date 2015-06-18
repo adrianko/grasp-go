@@ -135,7 +135,11 @@ func mapLiteral() {
 }
 
 type Vertex struct {
-	X, Y int
+	X, Y float64
+}
+
+func (v *Vertex) Abs() float64 {
+	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
 func main() {
@@ -184,11 +188,12 @@ func main() {
 	p := &t //pointer
 	*p = 21
 
-	fmt.Println(p)    //mem address
-	fmt.Println(*p)   //mem address value
-	v := Vertex{1, 2} //use Struct (collection of fields)
-	fmt.Println(v.X)
+	fmt.Println(p)  //mem address
+	fmt.Println(*p) //mem address value
 	slices()
 	maps()
 	mapLiteral()
+	fmt.Println("-----------")
+	v := &Vertex{3, 4}
+	fmt.Println(v.Abs())
 }

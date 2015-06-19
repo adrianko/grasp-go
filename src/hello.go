@@ -134,6 +134,10 @@ func mapLiteral() {
 	fmt.Println("Value:", v, "Present:", ok)
 }
 
+type Abser interface {
+	Abs() float64
+}
+
 type Vertex struct {
 	X, Y float64
 }

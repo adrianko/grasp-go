@@ -146,6 +146,10 @@ func (v *Vertex) Abs() float64 {
 	return math.Sqrt(v.X*v.X + v.Y*v.Y)
 }
 
+func (v *Vertex) String() string {
+	return fmt.Sprintf("X: %f, Y: %f", v.X, v.Y)
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -200,4 +204,5 @@ func main() {
 	fmt.Println("-----------")
 	v := &Vertex{3, 4}
 	fmt.Println(v.Abs())
+	fmt.Println(v)
 }

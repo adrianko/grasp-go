@@ -150,6 +150,19 @@ func (v *Vertex) String() string {
 	return fmt.Sprintf("X: %f, Y: %f", v.X, v.Y)
 }
 
+type Error struct {
+	When time.Time
+	What string
+}
+
+func (e *Error) Error() string {
+	return fmt.Sprintf("at %v, %s", e.When, e.What)
+}
+
+func err() error {
+	 return &Error{time.Now(), "Broken",}
+}
+
 func main() {
 	fmt.Println("Hello, world")
 	/*
@@ -205,4 +218,5 @@ func main() {
 	v := &Vertex{3, 4}
 	fmt.Println(v.Abs())
 	fmt.Println(v)
+	fmt.Println(err())
 }

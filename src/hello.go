@@ -6,6 +6,8 @@ import (
 	"math"
 	"math/rand"
 	"time"
+	"strings"
+	"io"
 )
 
 func add(x int, y int) int {
@@ -134,6 +136,21 @@ func mapLiteral() {
 	fmt.Println("Value:", v, "Present:", ok)
 }
 
+func reader() {
+	r := strings.NewReader("Hello, Reader")
+	b := make([]byte, 8)
+	
+	for {
+		n, err := r.Read(b)
+		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
+		fmt.Printf("b[:n] = %q\n", b[:n])
+		
+		if err == io.EOF {
+			break
+		}
+	}
+}
+
 type Abser interface {
 	Abs() float64
 }
@@ -219,4 +236,6 @@ func main() {
 	fmt.Println(v.Abs())
 	fmt.Println(v)
 	fmt.Println(err())
+	fmt.Println("-----------")
+	reader()
 }

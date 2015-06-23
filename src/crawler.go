@@ -2,12 +2,13 @@ package main
 
 import (
     "fmt"
+    "net/http"
 )
 
-type Fetcher interface {
-    Fetch(url string) (body string, urls []string, err error)
-}
-
-func Crawl(url string, depth int, fetcher Fetcher) {
+func main() {
+    resp, err := http.Get("http://google.com/")
     
+    if err == nil {
+        fmt.Println(resp)
+    }
 }

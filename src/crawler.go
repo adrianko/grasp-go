@@ -16,6 +16,7 @@ func main() {
     }
 
     body, err := ioutil.ReadAll(response.Body)
+    
     if err != nil {
         log.Fatalf("ERROR: %s", err)
     }

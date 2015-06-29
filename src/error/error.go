@@ -1,4 +1,4 @@
-package main
+package error
 
 import (
     "time"
@@ -17,7 +17,8 @@ func (e *Error) Error() string {
 func err() error {
 	 return &Error{time.Now(), "Broken",}
 }
-
+/*
 func main() {
     fmt.Println(err())
 }
+*/
